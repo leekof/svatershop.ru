@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clumsy svater_55 | Читы для Standoff 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #0a0a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1a1a3a 0%, #0a0a1a 100%);
+            padding: 20px 0;
+            border-bottom: 2px solid #ff4500;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            color: #ff4500;
+            text-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+        }
+        
+        .logo span {
+            color: #ffffff;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff4500;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a3a 0%, #0a0a1a 100%);
+        }
+        
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ff4500;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #cccccc;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4500 0%, #ff6b35 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: #111125;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 36px;
+            color: #ff4500;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: #1a1a3a;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #2a2a4a;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #ff4500;
+        }
+        
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #ff4500;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: #1a1a3a;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid #2a2a4a;
+            transition: transform 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.05);
+            border-color: #ff4500;
+        }
+        
+        .pricing-header {
+            background: linear-gradient(135deg, #ff4500 0%, #ff6b35 100%);
+            padding: 20px;
+        }
+        
+        .pricing-header h3 {
+            font-size: 24px;
+        }
+        
+        .price {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .pricing-features {
+            padding: 20px;
+            list-style: none;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #2a2a4a;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Reviews Section */
+        .reviews {
+            padding: 80px 0;
+            background-color: #111125;
+        }
+        
+        .reviews-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #ff4500;
+        }
+        
+        .reviews-subtitle {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 20px;
+            color: #cccccc;
+        }
+        
+        .reviews-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 20px 0;
+            scrollbar-width: thin;
+            scrollbar-color: #ff4500 #1a1a3a;
+        }
+        
+        .reviews-slider::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .reviews-slider::-webkit-scrollbar-track {
+            background: #1a1a3a;
+            border-radius: 10px;
+        }
+        
+        .reviews-slider::-webkit-scrollbar-thumb {
+            background: #ff4500;
+            border-radius: 10px;
+        }
+        
+        .review-card {
+            min-width: 350px;
+            background: #1a1a3a;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #2a2a4a;
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ff4500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 15px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .review-stars {
+            color: #ffd700;
+            margin-left: auto;
+        }
+        
+        /* Support Section */
+        .support {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .support p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .telegram-link {
+            display: inline-flex;
+            align-items: center;
+            background: #0088cc;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+        
+        .telegram-link:hover {
+            transform: translateY(-3px);
+        }
+        
+        .telegram-link i {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0a0a1a;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #2a2a4a;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #cccccc;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ff4500;
+        }
+        
+        .copyright {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .review-card {
+                min-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Clumsy <span>svater_55</span></h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#features">Преимущества</a></li>
+                        <li><a href="#pricing">Товары</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#support">Поддержка</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Лучшие кламси для Standoff 2</h2>
+            <p>Недорогие и эффективные читы для APK версии игры. Улучшите свой геймплей уже сегодня!</p>
+            <a href="#pricing" class="btn">Выбрать товар</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Наши преимущества</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Высокая эффективность</h3>
+                    <p>Наши читы работают стабильно и не обнаруживаются античитом.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💸</div>
+                    <h3>Низкие цены</h3>
+                    <p>Предлагаем одни из самых доступных цен на рынке.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Для APK версии</h3>
+                    <p>Специально разработаны для APK версии Standoff 2.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Простая установка</h3>
+                    <p>Легкая установка и настройка за несколько минут.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Безопасность</h3>
+                    <p>Полная анонимность и защита вашего аккаунта.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Регулярные обновления</h3>
+                    <p>Постоянное обновление функционала под новые версии игры.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Наши товары</h2>
+            <div class="pricing-grid">
+                <!-- Товар 1 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Halk(standart)</h3>
+                    </div>
+                    <div class="price">100 ₽</div>
+                    <ul class="pricing-features">
+                        <li>✔️ Стопер (standart)</li>
+                        <li>✔️ поддержка 24/7 (premium)</li>
+                        <li>✔️ Anti-Ban (максимальный)</li>
+                        <li>✔️ 2сек</li>
+                        <li>✔️ Пожизненный доступ</li>
+                    </ul>
+                    <div style="padding: 20px;">
+                        <a href="#support" class="btn">Купить</a>
+                    </div>
+                </div>
+                
+                <!-- Товар 2 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Halk(premium)</h3>
+                    </div>
+                    <div class="price">150 ₽</div>
+                    <ul class="pricing-features">
+                        <li>✔️ Стопер (premium)</li>
+                        <li>✔️ поддержка 24/7 (premium)</li>
+                        <li>✔️ Anti-Ban (максимальный)</li>
+                        <li>✔️ 3,5сек</li>
+                        <li>✔️ Пожизненный доступ</li>
+                    </ul>
+                    <div style="padding: 20px;">
+                        <a href="#support" class="btn">Купить</a>
+                    </div>
+                </div>
+                
+                <!-- Товар 3 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Zikas(standart)</h3>
+                    </div>
+                    <div class="price">170 ₽</div>
+                    <ul class="pricing-features">
+                        <li>✔️ Стопер (standart)</li>
+                        <li>✔️ Поддержка 24/7 (standart)</li>
+                        <li>✔️ Anti-Ban (максимальный)</li>
+                        <li>✔️ 4,9сек</li>
+                        <li>✔️ Пожизненный доступ</li>
+                    </ul>
+                    <div style="padding: 20px;">
+                        <a href="#support" class="btn">Купить</a>
+                    </div>
+                </div>
+                
+                <!-- Товар 4 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Zikas(premium)</h3>
+                    </div>
+                    <div class="price">200 ₽</div>
+                    <ul class="pricing-features">
+                        <li>✔️ Стопер (premium)</li>
+                        <li>✔️ Поддержка 24/7 (premium)</li>
+                        <li>✔️ Anti-Ban (максимальный)</li>
+                        <li>✔️ 2сек</li>
+                        <li>✔️ Пожизненный доступ</li>
+                    </ul>
+                    <div style="padding: 20px;">
+                        <a href="#support" class="btn">Купить</a>
+                    </div>
+                </div>
+                
+                <!-- Товар 5 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Инвиз(standart)</h3>
+                    </div>
+                    <div class="price">договорная</div>
+                    <ul class="pricing-features">
+                        <li>✔️ Инвиз (standart)</li>
+                        <li>✔️ Поддержка 24/7 (standart)</li>
+                        <li>✔️ 10сек</li>
+                        <li>✔️ Anti-Ban (максимальный)</li>
+                        <li>✔️ Пожизненный доступ</li>
+                    </ul>
+                    <div style="padding: 20px;">
+                        <a href="#support" class="btn">Купить</a>
+                    </div>
+                </div>
+                
+                <!-- Товар 6 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Инвиз(premium)</h3>
+                    </div>
+                    <div class="price">договорная</div>
+                    <ul class="pricing-features">
+                        <li>✔️ Инвиз (premium)</li>
+                        <li>✔️ Поддержка 24/7 (premium)</li>
+                        <li>✔️ 30сек</li>
+                        <li>✔️ Anti-Ban (максимальный)</li>
+                        <li>✔️ Пожизненный доступ</li>
+                    </ul>
+                    <div style="padding: 20px;">
+                        <a href="#support" class="btn">Купить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="reviews-title">Отзывы клиентов</h2>
+            <p class="reviews-subtitle">Более 100 довольных клиентов уже оценили наши продукты!</p>
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background-color: #4a4a8a; background-image: radial-gradient(circle, #ff9900, #ff4500);">👑</div>
+                        <div>
+                            <h4>𝐊𝐄𝐍𝐓𝐎𝐒</h4>
+                            <p>Играет 2 года</p>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p>Пользуюсь читами уже 3 месяца. Никаких банов, все работает стабильно. Поддержка всегда на связи, помогают с установкой.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background-color: #4a4a8a; background-image: linear-gradient(45deg, #00ccff, #0066ff);">⚡</div>
+                        <div>
+                            <h4>𝐛𝐥𝐲𝐦𝟏𝐱</h4>
+                            <p>Играет 1 год</p>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p>Купил стопер от халка. Очень доволен! Стопер просто бомба, теперь всегда в топе. Скоро возьму премиум.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background-color: #4a4a8a; background-image: radial-gradient(circle, #ff66cc, #cc00cc);">🌟</div>
+                        <div>
+                            <h4>Fa3ymchk</h4>
+                            <p>Играет 6 месяцев</p>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                    </div>
+                    <p>Хорошие читы за свои деньги. Советую сразу брать премиум.Поддержка быстро все исправляет. Рекомендую!</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background-color: #4a4a8a; background-image: linear-gradient(135deg, #00ff99, #0099ff);">🛡️</div>
+                        <div>
+                            <h4>֍𝓐𝓵𝓵𝓮𝓰𝓮𝓼֍</h4>
+                            <p>Играет 3 года</p>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p>Попробовал много разных читов, эти лучшие по соотношению цена,качество. Anti-Ban работает отлично, аккаунт в безопасности.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background-color: #4a4a8a; background-image: linear-gradient(45deg, #ff3366, #ff9933);">🚀</div>
+                        <div>
+                            <h4>Fasterdcall</h4>
+                            <p>Играет 8 месяцев</p>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p>Простая установка, интуитивно понятный интерфейс. За такую цену - просто подарок! Спасибо за качественный продукт.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background-color: #4a4a8a; background-image: radial-gradient(circle, #66ff66, #00cc66);">🔧</div>
+                        <div>
+                            <h4>Игорь</h4>
+                            <p>Играет 1.5 года</p>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p>Купил Zikas premium. Всё работает отлично. Теперь всегда знаю, где покупать читы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support" id="support">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <p>По всем вопросам покупки и поддержки обращайтесь в Telegram</p>
+            <a href="https://t.me/svater_55" class="telegram-link">
+                <i>📱</i> @svater_55
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#features">Преимущества</a>
+                <a href="#pricing">Товары</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#support">Поддержка</a>
+            </div>
+            <p class="copyright">© 2023 Clumsy svater_55. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Простой скрипт для плавной прокрутки к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
